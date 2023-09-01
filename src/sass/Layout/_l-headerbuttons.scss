@@ -1,0 +1,70 @@
+@use "../global" as global;
+
+/*--------------------------------------------------
+    ヘッダー
+--------------------------------------------------*/
+
+.l-header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.l-header__bar {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    width: calc( 100% - 59px);
+    height: 59px;
+    justify-content: flex-start;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.2);
+    picture {
+        margin-left: 16px;
+        margin-top: -1px;
+    }
+}
+
+//----------------------------------------
+//   ヘッダーアイコン
+//----------------------------------------
+.l-header-buttons {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
+//----------------------------------------
+//  レスポンシブ
+//----------------------------------------
+@include global.mq('sp') {
+    .l-header {
+        left: 0;
+        top: 0;
+    }
+    .l-header__bar {
+        display: flex;
+        position: fixed;
+    }
+    .l-header-buttons {
+        .p-hamburger__wrapper {
+            z-index: 200;
+            .p-hamburger {
+                width: 59px; //global.vwsp(59);
+                height: 59px; //global.vwsp(59);
+                row-gap: 7px; //global.vwsp(7);
+                span {
+                    width: 19.91px; //global.vwsp(19.91);
+                    //height:16-2*3
+                }
+            }
+        }
+        .p-button__iconbox {
+            display: none;
+        }
+    }
+}

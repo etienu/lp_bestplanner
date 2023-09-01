@@ -1,0 +1,22 @@
+@use "../../global" as global;
+//  c-headline__h2と合わせる位置調整
+.p-headline__h2 {
+    margin-left: global.vwmax(118); // 8.194vw; //118px;
+}
+
+//  c-headline__h3と合わせる位置調整
+.p-headline__h3 {
+    margin-left: global.vwmax(146); //10.076vw; //130px;
+}
+
+//----------------------------------------
+//  レスポンシブ
+//----------------------------------------
+@include global.mq('sp') {
+    .p-headline__h2 {
+        margin-left: global.vwsp(27);
+    }
+    .p-headline__h3 {
+        margin-left: global.vwsp(32);
+    }
+}

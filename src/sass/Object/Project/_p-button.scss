@@ -1,0 +1,192 @@
+@use "../../global" as global;
+//  ポートフォリオ用
+.p-button__pf {
+    height: global.vwmax(50);
+    max-width: global.vwmax(300);
+    font-size: global.vwmax(20);
+}
+
+.p-button__submit {
+    height: global.vwmax(50);
+    max-width: global.vwmax(200);
+    font-size: global.vwmax(18);
+    font-weight: 600;
+}
+
+//  アイコンの入ったボタン
+.p-button__iconbox {
+    //    max-width: global.vwmax(103);
+    max-width: global.vwclampmax(72, 100);
+    max-height: global.vwclampmax(72, 100);
+    width: global.vwclampmax(72, 100);
+    height: global.vwclampmax(72, 100);
+    //    height: 100%;
+    //    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: global.$font-title;
+    border: 1px solid global.$color-blue;
+    background-color: global.$color-white;
+    color: global.$color-gray;
+    cursor: pointer;
+    transition: 0.3s;
+    .icon {
+        max-width: global.vwmax(40);
+        max-height: global.vwmax(40);
+        margin-left: global.vwmax(-4.5);
+        transition: 0.3s;
+        img {
+            max-width: global.vwmax(40);
+            max-height: global.vwmax(40);
+        }
+    }
+    p {
+        font-size: global.vwmax(12);
+        //transform: scale(0.1);
+        line-height: global.vwmax(16);
+        margin-top: global.vwmax(7);
+        //        margin-top: 2px;
+        margin-left: global.vwmax(-3);
+    }
+    &.begginer {
+        .icon {
+            margin-top: global.vwmax(10);
+            img {}
+        }
+        p {
+            margin-top: global.vwmax(2);
+        }
+    }
+    &.login {
+        .icon {
+            margin-top: global.vwmax(6);
+            margin-left: global.vwmax(-17);
+        }
+        p {
+            margin-top: global.vwmax(8);
+        }
+    }
+    &.heart {
+        .icon {
+            margin-top: global.vwmax(10);
+            margin-left: global.vwmax(-3);
+        }
+        p {
+            margin-top: 1px;
+        }
+    }
+    &:hover {
+        background-color: global.$color-blue;
+        color: global.$color-white;
+        .icon {
+            //filter: invert(100%);
+            filter: brightness(0) invert(100%);
+        }
+    }
+}
+
+//  基本
+.p-button {
+    display: block;
+    position: relative;
+    //width: 100%;
+    width: fit-content;
+    max-height: global.vwmax(62);
+    padding: global.vwmax(16); // 64px;
+    padding-left: global.vwmax(24);
+    font-weight: 500;
+    font-size: global.vwmax(20);
+    line-height: global.vwmax(30);
+    letter-spacing: 0.08em;
+    text-align: left;
+    transition: 0.3s;
+    cursor: pointer;
+    &:before {
+        transition: 0.3s;
+    }
+    &:after {
+        transition: 0.3s;
+    }
+    &.blue {
+        color: global.$color-white;
+        background-color: global.$color-blue;
+        border: 1px solid global.$color-blue;
+    }
+    &.gray {
+        color: global.$color-white;
+        background-color: global.$color-gray;
+        border: 1px solid global.$color-gray;
+    }
+    &.cv {
+        width: 100%;
+        text-align: center;
+        letter-spacing: 0.08em;
+    }
+    &.arrow {
+        letter-spacing: -0.01em;
+        padding-left: global.vwmax(24);
+        padding-right: global.vwmax(118);
+        transition: 0.3s;
+        &:before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            right: global.vwmax(25);
+            top: 50%;
+            width: global.vwmax(27);
+            height: 1px;
+            background-color: global.$color-white;
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            right: global.vwmax(25);
+            top: 50%;
+            width: global.vwmax(12);
+            height: 1px;
+            background-color: global.$color-white;
+            transform: translate(1px, global.vwmax(-3)) rotate( 30deg);
+        }
+    }
+    //  ホバー演出
+    &.hover__reverse {
+        &:hover {
+            background-color: global.$color-white;
+            &.gray {
+                color: global.$color-gray;
+            }
+            &.blue {
+                color: global.$color-blue;
+            }
+            &:before {
+                background-color: global.$color-gray;
+            }
+            &:after {
+                background-color: global.$color-gray;
+            }
+            &.arrow {
+                &:before {
+                    //right: global.vwmax(21);
+                    transform: translate( global.vwclampmax(2, 4), 0);
+                }
+                &:after {
+                    //right: global.vwmax(21);
+                    transform: translate( global.vwclampmax(3, 5), global.vwmax(-4)) rotate( 30deg);
+                }
+            }
+        }
+    }
+}
+
+//----------------------------------------
+//  レスポンシブ
+//----------------------------------------
+@include global.mq('sp') {
+    .p-button {}
+}

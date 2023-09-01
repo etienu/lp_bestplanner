@@ -1,0 +1,48 @@
+@use "../../global" as global;
+//----------------------------------------
+//   ハンバーガーメニュー
+//----------------------------------------
+.p-hamburger__wrapper {
+    right: 0;
+    transition: 0.3s;
+    z-index: 520;
+}
+
+.p-hamburger {
+    //    width: global.vwmax(103); //  カンプ100x100、しかし103じゃないと合わない
+    width: global.vwclampmax(72, 100);
+    height: global.vwclampmax(72, 100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: global.vwmax(10);
+    span {
+        width: global.vwmax(34);
+        height: global.vwmax(2);
+        border-radius: global.vwmax(20);
+        background-color: global.$color-white; //black;
+        transition: 0.3s;
+        margin-left: global.vwmax(-3);
+    }
+    transition: 0.3s;
+    background-color: global.$color-blue; //main-cv;
+    &:hover {
+        cursor: pointer;
+        background-color: global.$color-blue; //-main-cv;
+    }
+    &.open {
+        span {
+            &:nth-child(1) {
+                transform: rotate(135deg) translate(global.vwmax(8), global.vwmax(-8));
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: rotate(-135deg) translate(global.vwmax(4), global.vwmax(4));
+            }
+        }
+    }
+}

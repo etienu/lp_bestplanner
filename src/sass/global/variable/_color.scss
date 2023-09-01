@@ -1,0 +1,94 @@
+/*============================================================
+#   色
+#
+============================================================*/
+
+//etienu note
+$color-main-cv:rgba(255, 255, 0, 1);
+$color-main-cv-hover:rgba(255, 255, 100, 1);
+$color-main-accent:lightgreen;
+$color-main-accent-comp:rgb(208, 144, 238);
+$color-main-background:#7EAB71; //#3f783f;
+$color-main-background-comp:rgb(155, 113, 171);
+$color-main-background-mid:#5e7e5e;
+$color-main-background-dark:#364a36;
+$color-main-background-dark-comp:#4a364a;
+$color-main-bg-hover:#8ec280; //#3f783f;
+$color-post-background:white; //#f0fff4;
+$color-card-background:#2A5B2B; //rgb(25 52 39);
+$color-card-border:#619f4f; //#2A5B1B; //rgba(0, 80, 0, 1);
+$color-card-shadow:rgba(100, 255, 100, 0.6); //rgba(40, 255, 40, 0.6);
+$color-card-shadow-dark:rgba(71, 158, 71, 0.6);
+$color-button-contact:yellow;
+
+/*----------------------------------------
+        サイトの色指定
+----------------------------------------*/
+
+//  文字色
+$color-font:#1a1a1a;
+$color-font-w:#FFFFFF;
+$color-font-d:#555555; // disabled
+$color-font-accent:lightgreen;
+$color-font-light:$color-font-w;
+$color-font-dark:$color-font;
+//  キーカラー
+$color-key-main:#163F74;
+$color-key-main-dark:#002a52;
+$color-key-main-thin:#EEF3F8;
+$color-key-main-accent1:#FEF251;
+$color-key-main-accent2:#D33365;
+$color-key-gray:#888888;
+$color-key-lightgray:#F3F3F3;
+$color-key-black:#1a1a1a;
+$color-key-white:#FFFFFF;
+$color-key-yellow:#FFF400;
+$color-key-blue:#023E78;
+//$color-key-red:#D33365;
+$color-key-red:#E61264;
+$color-sub:#fff;
+$color-background:#fff;
+$color-nav--pagetop-button:#3f98ef;
+$color-accent-dark: rgb(19, 88, 19); // darkgreen
+$color-accent:lightgreen;
+//----------------------------------------
+//      色
+//----------------------------------------
+$color-whitegray: #F7F7F7; // footer
+$color-lightgray: #D9D9D9; // H3
+$color-middlegray: #C8C8C8; // 途中の背景
+$color-point-gray: rgba(117, 118, 118, 0.14);
+$color-gray: #757676;
+$color-blue: #84D6D6;
+$color-sky: #EEF9F8;
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-lightblack: #202020;
+$color-font-black: $color-black;
+$color-font-lightblack: $color-lightblack;
+$color-background: $color-white;
+$color-background-lightgray: #F4F4F4;
+//
+$color-tag-perple: #D684B8;
+$color-tag-orange: #F1B04E;
+$color-tag-green: #ABD07B;
+$color-tag-blue: #84B6D6;
+$color-tag-blue2: #84D6D6;
+$color-tag-sand: #D6BF84;
+//
+$color-rank-gold: #C99700;
+$color-rank-silver: #C4C4C4;
+$color-rank-bronze: #BA6E40;
+//
+$color-star-gold: #F1B04E;
+$color-star-none: #D9D9D9;
+//
+$color-like: #F26587;
+$color-fav: #F2C247;
+//      場面別
+//$color-background : $color-black;
+$color-font-headlineh2-eng: $color-gray;
+$color-font-headlineh2-jp: $color-font-lightblack;
+$color-headlineh3-box: $color-lightgray;
+$color-font-headlineh3-eng: $color-blue;
+$color-font-headlineh3-jp: $color-font-lightblack;
